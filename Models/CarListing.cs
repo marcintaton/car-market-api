@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace CarMarket.Models
 {
     ///
-    /// Model representing a single listing object
+    /// Model representing a single listing entity
     ///
     public class CarListing
     {

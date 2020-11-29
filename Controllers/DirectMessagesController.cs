@@ -20,14 +20,14 @@ namespace CarMarket.Controllers
             _context = context;
         }
 
-        // GET: api/DirectMessages
+        /// GET: api/DirectMessages
         [HttpGet]
         public async Task<ActionResult<IEnumerable<DirectMessage>>> GetDirectMessages()
         {
             return await _context.DirectMessages.ToListAsync();
         }
 
-        // GET: api/DirectMessages/5
+        /// GET: api/DirectMessages/5
         [HttpGet("{id}")]
         public async Task<ActionResult<DirectMessage>> GetDirectMessage(int id)
         {
@@ -41,9 +41,9 @@ namespace CarMarket.Controllers
             return directMessage;
         }
 
-        // PUT: api/DirectMessages/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for
-        // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
+        /// PUT: api/DirectMessages/5
+        /// To protect from overposting attacks, enable the specific properties you want to bind to, for
+        /// more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPut("{id}")]
         public async Task<IActionResult> PutDirectMessage(int id, DirectMessage directMessage)
         {
@@ -73,9 +73,9 @@ namespace CarMarket.Controllers
             return NoContent();
         }
 
-        // POST: api/DirectMessages
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for
-        // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
+        /// POST: api/DirectMessages
+        /// To protect from overposting attacks, enable the specific properties you want to bind to, for
+        /// more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPost]
         public async Task<ActionResult<DirectMessage>> PostDirectMessage(DirectMessage directMessage)
         {
@@ -85,7 +85,7 @@ namespace CarMarket.Controllers
             return CreatedAtAction("GetDirectMessage", new { id = directMessage.Id }, directMessage);
         }
 
-        // DELETE: api/DirectMessages/5
+        /// DELETE: api/DirectMessages/5
         [HttpDelete("{id}")]
         public async Task<ActionResult<DirectMessage>> DeleteDirectMessage(int id)
         {
